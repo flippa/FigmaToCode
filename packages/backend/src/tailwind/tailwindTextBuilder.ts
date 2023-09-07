@@ -97,7 +97,10 @@ export class TailwindTextBuilder extends TailwindDefaultBuilder {
   };
 
   fontFamily = (fontName: FontName): string => {
-    return "font-['" + fontName.family + "']";
+    if (fontName.family == "Montserrat") {
+      return "font-mon";
+    }
+    return "";
   };
 
   /**
